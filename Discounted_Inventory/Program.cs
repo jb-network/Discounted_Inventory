@@ -47,7 +47,7 @@ string itemPurchased = userChoice switch
     _ => "Sorry, that is not an item from the list"    
 };
 
-//Now that itemPurchased is set with the item name, the next switch will map the item name to a price via itemPrice int.
+//Now that itemPurchased is set with the item name, the next switch will map the item name to a price via itemPrice float.
 float itemPrice = itemPurchased switch
 {
     "Rope" => 10,
