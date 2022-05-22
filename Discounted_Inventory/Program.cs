@@ -44,6 +44,7 @@ string itemPurchased = userChoice switch
     5 => "Machete",
     6 => "Canoe",
     7 => "Food Supplies"
+    _ => "Sorry, that is not an item"    
 };
 
 //Now that itemPurchased is set with the item name, the next switch will map the item name to a price via itemPrice int.
