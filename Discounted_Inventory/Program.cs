@@ -72,7 +72,7 @@ if (playerName == "Swamp Fox" && userChoice < 8)
         "\nYou are the father of modern guerrilla warfare. " +
         "\nYou get a 50% discount!");
 }
-
+// itemPrice at 0 maps to item numbers that are outside of the choices.  Zero is set as a catch all. 
 if (itemPrice != 0)
 {
     Console.WriteLine($"\n\n{itemPurchased} costs {itemPrice} gold");
