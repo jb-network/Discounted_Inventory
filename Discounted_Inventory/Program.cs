@@ -46,7 +46,7 @@ string itemPurchased = userChoice switch
     7 => "Food Supplies"
 };
 
-//Now that itemPurchased is ste with the item name, the next switch will map  the item name to a price via itemPrice int.
+//Now that itemPurchased is set with the item name, the next switch will map the item name to a price via itemPrice int.
 int itemPrice = itemPurchased switch
 {
     "Rope" => 10,
