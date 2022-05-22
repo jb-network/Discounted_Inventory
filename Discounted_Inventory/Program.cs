@@ -43,12 +43,12 @@ string itemPurchased = userChoice switch
     4 => "Clean Water",
     5 => "Machete",
     6 => "Canoe",
-    7 => "Food Supplies"
-    _ => "Sorry, that is not an item"    
+    7 => "Food Supplies",
+    _ => "Sorry, that is not an item from the list"    
 };
 
 //Now that itemPurchased is set with the item name, the next switch will map the item name to a price via itemPrice int.
-int itemPrice = itemPurchased switch
+float itemPrice = itemPurchased switch
 {
     "Rope" => 10,
     "Tourches" => 15,
@@ -56,11 +56,13 @@ int itemPrice = itemPurchased switch
     "Clean Water" => 1,
     "Machete" => 20,
     "Canoe" => 200,
-    "Food Supplies" => 1
+    "Food Supplies" => 1,
+    _ => 0
+
 };
 
 //Discount for Swamp Fox and a bit of lore for fun
-if (playerName == "Swamp Fox")
+if (playerName == "Swamp Fox" && userChoice < 8)
 {
     itemPrice /= 2;
     
@@ -71,8 +73,15 @@ if (playerName == "Swamp Fox")
         "\nYou get a 50% discount!");
 }
 
-Console.WriteLine($"\n\n{itemPurchased} costs {itemPrice} gold");
-
+if (itemPrice != 0)
+{
+    Console.WriteLine($"\n\n{itemPurchased} costs {itemPrice} gold");
+}
+else
+{
+    Console.WriteLine("The item you selected is not on the list. " +
+        "\nPlease run the program again");
+}
 //Close out the program with a key press
 Console.WriteLine("Press any key to end program");
 Console.ReadKey();
