@@ -11,7 +11,7 @@ using System.Globalization;
 
 // Creates a TextInfo based on the "en-US" culture.
 TextInfo tInfo = new CultureInfo("en-US", false).TextInfo;
-Console.WriteLine("Enter your players name: ");
+Console.WriteLine("Enter your player's name: ");
 // Passes console to ToTitleCase to ensure name entered in normalized to have the first letter in uppercase and the rest in lower case
 string playerName = tInfo.ToTitleCase(Console.ReadLine());
 Console.Clear();
